@@ -1,20 +1,50 @@
+ .fgv-bg1{
+  background-image: url('https://s3-alpha-sig.figma.com/img/0b0d/7354/18892239591f7ff7d30eae83d691fae2?Expires=1702252800&Signature=eBL55hSN2SghABudycoLTHwrCaBcYH2uj0VP7NSkXb~NGImxMpZ4KgbksshEPToK0uE5b0ipRyIRC2R8vtqfEqEvxtbrwhw9DizoXPaXftQTwWlfbo~DKcV6sQQdqPP0fvnlxi0aFPF77EJMBFi9LEdObGuKzWVe3DQPUNnC~9NG59EiNNEyb56bp~-JNBAQXxeqUP2hZh2nTiTYpxExvUXIu8HhFl29SATtpMOWhkPH0cyHwTkNQxXx7-NnW~Pc9tfKsa2IOlkZ8V58PXRQX72odCwsbR~-yrd9ROZiH6WEAz3T1CTf3~JBh7VKs2Osz-4BIt-2zeXA3hjQRoHzCQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+   height: 52.8vh;
+   width: 39%;
+  /* width: 100%;  */
+  /* margin-left: 50%; */
+  border-radius: 15px;
+  /* margin-left: 20%; */
+  padding: 2.5rem;
+
+  
+} 
+
+
+
+
 .fgv-bgcontainer {
-  background-image: url(forgot-back.png);
+  /* background-image: url(forgot-back.png); */
+  
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  /* margin: auto;
+  margin-bottom: -8.8%;
+  margin-top: -8.8%; */
+  /* border-radius: 20px; */
+  /* margin: auto; */
+ margin: auto;
+  
 }
 
 .fgv-cardcontainer {
-  padding: 30px;
-  margin: 20px;
-  height: 60vh;
+  padding: 2rem;
+  /* margin: 20px; */
+  height:55vh;
+  width: 70%;
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 26%;
+ position: relative;
+ top: -10.2%;
+  /* margin-top: 2.5%; */
+  /* margin-bottom: 7%; */
 }
 
 .fgv-field {
@@ -24,11 +54,23 @@
 }
 
 .fgv-input-field input {
-  width: 100%;
+  width: 95%;
   padding: 10px;
   border: 1px solid #3d48e3;
-  border-radius: 5px;
+  border-radius: 0px;
   transition: border-color 0.3s ease-in-out;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  
+}
+.fgv-input-field{
+  display: flex;
+  align-items: center;
+}
+
+.icon1{
+  margin-left: 280px;
 }
 
 .fgv-input-field input:focus {
@@ -37,8 +79,8 @@
 
 .fgv-button-field button {
   width: 100%;
-  padding: 10px;
-  background-color: #3d48e3;
+  padding: 10px 15px;
+  background-color: #111133;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -71,6 +113,8 @@
   .fgv-button-field button {
     width: 100%;
   }
+  
+  
 }
 
 /* Styles for even smaller screens (e.g., smartphones) */
