@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Forgot.css";
+import { Link } from "react-router-dom"; 
 import { AiOutlineArrowLeft } from "react-icons/ai";
 
 const Forgot = () => {
@@ -62,19 +63,20 @@ const Forgot = () => {
 
   return (
     <div className="fg-bgcontainer">
+      <div className="backgr-45">
       <div className="fg-cardcontainer">
-        <div className="fgarrow">
+        {/* <div className="fgarrow">
           <AiOutlineArrowLeft></AiOutlineArrowLeft>
-        </div>
-        <h1 className="fgheadername">Forgot Password</h1>
+        </div> */}
+        <h1 className="fgheadername">Forgotten Password</h1>
         <p className="fgpara">
-          Recover your password if you have forgotten it!
+          we will send you an email to reset your password
         </p>
         <div className="fieldcontainer">
           {!showOtpField ? (
             <form onSubmit={handleEmailSubmit}>
               <div className="fg-field fg-input-field">
-                <label>Email</label>
+                {/* <label></label> */}
                 <input
                   type="email"
                   placeholder="Email"
@@ -87,8 +89,19 @@ const Forgot = () => {
                 <button type="submit" className="button">
                   Submit
                 </button>
+
+                <div className="or-line">
+                <span>--OR--</span>
               </div>
+              <div className="backtologin">
+                <Link to="/login">Or back to login</Link>
+                
+              </div>
+              
+              </div>
+              
             </form>
+            
           ) : (
             <form onSubmit={handleOtpSubmit}>
               <div className="fg-field fg-input-field">
@@ -110,6 +123,7 @@ const Forgot = () => {
           )}
         </div>
       </div>
+    </div>
     </div>
   );
 };

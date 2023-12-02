@@ -77,9 +77,10 @@ const Register = () => {
   };
 
   return (
-    <div className="bgcontainer1">
-      <form className="container1 forms1" onSubmit={handleSubmit}>
-        <div className="form1 register">
+    <div className="bgRegistercontainermain">
+     <div className='bgRegistercontainer1' >
+     <form className=" forms1" onSubmit={handleSubmit}>
+        
           <div className="form-content1">
             <header className="Headername1">Register Now</header>
             <div className="field1 input-field1">
@@ -131,22 +132,13 @@ const Register = () => {
             <div className="field1 button-field1">
               <button type="submit-register">Register</button>
             </div>
-            <div className="form-link1">
-              <span>
-                <strong>
-                  Already have an account?{' '}
-                  <Link className="span1" to="/login">
-                    Login
-                  </Link>
-                </strong>
-              </span>
-            </div>
+           
           </div>
-          <div className="line11">
-            <div className="section3"></div>
+          
+           
             <p className="para1">Or</p>
-            <div className="section4"></div>
-          </div>
+           
+          
           <div className="log-google google-login-container">
         <GoogleOAuthProvider clientId="476717558763-pbbvpjdugi7ium3eprbclkqn8f61hllf.apps.googleusercontent.com">
           <GoogleLogin
@@ -161,8 +153,19 @@ const Register = () => {
           />
         </GoogleOAuthProvider>
       </div>
-        </div>
+      <div className="form-link1">
+              <span>
+                
+                  Already have an account?{' '}
+                  <Link className="span1" to="/login">
+                    Login
+                  </Link>
+               
+              </span>
+            </div>
+       
       </form>
+     </div>
     </div>
   );
 };
