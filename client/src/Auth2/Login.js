@@ -76,12 +76,12 @@ const Login = () => {
                 />
               </div>
 
-              {/* Forgot password link */}
-              {/* <div className="loginform-link">
+             
+               <div className="loginform-link">
                 <Link to="/forgot" className="loginforgot-pass">
                   Forgot password?
                 </Link>
-              </div> */}
+              </div>
 
               {/* Display error message */}
               {message && <p className="login-error-message">{message}</p>}
