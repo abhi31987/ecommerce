@@ -46,8 +46,10 @@ const Login = () => {
   };
 
   return (
+    <div className='overflow'>
     <div className="loginbgcontainer1">
       <section className="logincontainer1 loginforms1">
+        <div className='logincontainer2'>
         <div className="loginform1 register">
           <div className="loginform-content1">
             <header className="loginHeadername1">Login</header>
@@ -75,11 +77,11 @@ const Login = () => {
               </div>
 
               {/* Forgot password link */}
-              <div className="loginform-link">
+              {/* <div className="loginform-link">
                 <Link to="/forgot" className="loginforgot-pass">
                   Forgot password?
                 </Link>
-              </div>
+              </div> */}
 
               {/* Display error message */}
               {message && <p className="login-error-message">{message}</p>}
@@ -91,7 +93,11 @@ const Login = () => {
             </form>
             
             {/* Link to register page */}
-            <div className="loginform-link1">
+
+            <div className='login-or'>
+              <div className='login-hr1'/><div className='or'>or</div><div className='login-hr2'/>
+            </div>
+            {/* <div className="loginform-link1">
               <span>
                 <strong>
                   Don't have an account?{' '}
@@ -100,16 +106,11 @@ const Login = () => {
                   </Link>
                 </strong>
               </span>
-            </div>
+            </div> */}
           </div>
           
           {/* Google login */}
-          <div className="loginline11">
-            <div className="section3"></div>
-            <p className="loginpara1">Or</p>
-            <div className="section4"></div>
-          </div>
-          <div className="log-google google-login-container">
+          <div className="log-google google-login-containers">
             <GoogleOAuthProvider clientId="476717558763-pbbvpjdugi7ium3eprbclkqn8f61hllf.apps.googleusercontent.com">
               <GoogleLogin
                 onSuccess={(credentialResponse) => {
@@ -123,8 +124,21 @@ const Login = () => {
               />
             </GoogleOAuthProvider>
           </div>
+
+                 <div className="loginform-link1">
+              <span>
+                  Don't have an account?{' '}
+                  <strong>
+                  <Link className="loginspan1" to="/register">
+                    Register
+                  </Link>
+                </strong>
+              </span>
+            </div>
+        </div>
         </div>
       </section>
+    </div>
     </div>
   );
 };
