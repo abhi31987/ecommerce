@@ -1,0 +1,216 @@
+.bgcontainer1 {
+  background-image: url('register-back.jpg');
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+margin-top: 35px;
+}
+.container1 {
+  display: flex;
+  padding: 12px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-family: Verdana;
+}
+.forms1 {
+  background-color:transparent;
+  max-width: 600px;
+  width: 130%;
+  height:85%;
+  padding: 10px;
+  margin-top: 50px;
+  border-radius: 10px;
+  
+  /* box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); */
+}
+.form-content1 {
+  text-align: center;
+  color: #ad47bd;
+  /* font-weight: bold; */
+}
+.span1{
+  color:#000000;
+  
+}
+.span1:hover{
+  color:#05ed01;
+  
+}
+.para1{
+  color:#f5f7fb;
+}
+.Headername1 {
+  color:black;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.field1 {
+  margin-bottom: 20px;
+}
+.input-field1 input {
+  width: 130%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-left: -50px;
+}
+.input-field1 input::placeholder {
+  font-size: 14px; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  color: #aaa; /* Adjust the placeholder text color */
+}
+.password1 {
+  position: relative;
+}
+
+.password1 .eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.form-link1 {
+  margin-bottom: 6px;
+  color: #fcf9f9;
+  width: 100%;
+  
+}
+.button-field1 button {
+  width: 130%;
+  padding: 10px;
+  background-image: linear-gradient(to right, #4879f4, #05ed01, #f05b28);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: -40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+.button-field1 button:hover{
+
+  background-image: linear-gradient(to right, #3b4b3f, #0da34e, #f0571a);
+
+}
+.line11 {
+  display: flex; /* Use flexbox to create a flexible container */
+  justify-content: space-between; /* Space the two sections evenly */
+  max-width: 1200px; /* Optional: Set a maximum width for the container */
+  margin: 0 auto; /* Optional: Center the container on the page */
+}
+.section3,
+.section4 {
+  flex: 1; /* Allow the sections to grow and take equal space */
+  padding: 14px; /* Add some spacing around the content within each section */
+  /*  border: 1px solid #ccc; / / Optional: Add a border for visual separation */
+  box-sizing: border-box; /* Optional: Include padding and border in the section's total width */
+}
+.section4 {
+  padding: 16px;
+}
+.media-options11 {
+  /* background-color: #f8fafc; */
+  border-radius: 12px;
+  width: 130%;
+  text-align: center;
+   margin-left: -50px;
+   color: #4879f4;
+}
+.media-options12 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border-style: solid; */
+  border-width: 1px;
+  border-color: #666;
+  border-radius: 20px;
+  width: 150%;
+  
+}
+.google-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5px;
+}
+
+/* Apply styles to GoogleLogin button */
+.google-login-container .google-login-button {
+  background-color: #db4a39; /* Change background color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.google-login-container .google-login-button:hover {
+  background-color: #e57373; /* Change hover background color */
+}
+.gicons11 {
+  padding-right: 24px;
+
+  
+  padding: 10px;
+  border-radius: 24px;
+text-align: center;
+}
+
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+    width: 270px;
+    height: auto;
+  }
+
+  .forms {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .forms {
+    padding: 10px;
+  }
+
+  .field input {
+    padding: 5px;
+    max-width: fit-content;
+  }
+}
+
+@media (max-width: 600px) {
+  .container1 {
+    flex-direction: column;
+    height: auto;
+    width: 270px;
+    height: auto;
+  }
+
+  .forms1 {
+    margin: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .forms1 {
+    padding: 10px;
+  }
+
+  .field1 input {
+    padding: 5px;
+  }
+}

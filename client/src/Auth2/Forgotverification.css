@@ -1,0 +1,97 @@
+.fgv-bgcontainer {
+  background-image: url(forgot-back.png);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.fgv-cardcontainer {
+  padding: 30px;
+  margin: 20px;
+  height: 60vh;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fgv-field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fgv-input-field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #3d48e3;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.fgv-input-field input:focus {
+  border-color: #8e44ad;
+}
+
+.fgv-button-field button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3d48e3;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fgv-button-field button:hover {
+  background-color: #8e44ad;
+}
+
+.fgv-message {
+  color: #e74c3c;
+  margin-top: 10px;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 768px) {
+  .fgv-bgcontainer {
+    flex-direction: column;
+  }
+
+  .fgv-cardcontainer {
+    height: auto;
+  }
+
+  .fgv-input-field input {
+    width: 100%;
+  }
+
+  .fgv-button-field button {
+    width: 100%;
+  }
+}
+
+/* Styles for even smaller screens (e.g., smartphones) */
+@media (max-width: 480px) {
+  .fgv-cardcontainer {
+    padding: 20px;
+  }
+
+  .fgvheadername {
+    font-size: 24px;
+  }
+
+  .fgvpara {
+    margin-bottom: 30px;
+  }
+
+  .fgv-input-field input {
+    padding: 8px;
+  }
+
+  .fgv-button-field button {
+    padding: 8px;
+  }
+}
