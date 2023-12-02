@@ -178,3 +178,11 @@
       width: 100%;
    }
   }
+
+  .productform-category{
+   padding: .3rem;
+   margin: .2rem;
+  }
+  .productform-choosefile{
+   padding: .5rem;
+  }
