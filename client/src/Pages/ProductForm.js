@@ -5,6 +5,7 @@ import './ProductForm.css'
 const ProductForm = () => {
   const [formData, setFormData] = useState({
     productName: "",
+    category: [],
     productImages: [],
     productDescription: "",
     occasion: "",
@@ -33,6 +34,15 @@ const ProductForm = () => {
     }));
   };
 
+  const handleCategoryChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: [value], // Wrap the value in an array
+    }));
+  };
+  
+
   const handleImageChange = (e) => {
     setFormData((prevFormData) => ({
       ...prevFormData,
@@ -47,6 +57,7 @@ const ProductForm = () => {
     try {
       const formDataToSubmit = new FormData();
       formDataToSubmit.append("productName", formData.productName);
+      formDataToSubmit.append("category", formData.category);
 
       formData.productImages.forEach((image, index) => {
         formDataToSubmit.append(`productImages`, image);
@@ -94,9 +105,9 @@ const ProductForm = () => {
 
   return (
     <div className="product-form1">
-      <h1 className="c1">Add Product</h1>
-      <form onSubmit={handleSubmit} style={{borderRadius:'10px',marginBottom:'1%'}}>
-        <div>
+    <h1 className="c1">Add Product</h1>
+    <form onSubmit={handleSubmit} style={{borderRadius:'10px',marginBottom:'1%'}}>
+      <div>
           <label>Product Name:</label>
           <input
             type="text"
@@ -107,14 +118,29 @@ const ProductForm = () => {
           />
         </div>
         <div>
+          <label>Category:</label>  <br/>
+          <select
+            name="category"
+            value={formData.category}
+            onChange={handleCategoryChange}
+            required
+            className="productform-category"
+          >
+            <option value="">Select Category</option>
+            <option value="Men">Men</option>
+            <option value="Women">Women</option>
+            <option value="Kids">Kids</option>
+          </select>
+        </div>
+        <div>
           <label>Product Images:</label>
           <input
             type="file"
             name="productImages"
             onChange={handleImageChange}
             multiple
-            className="productimages1000"
             required
+            className="productform-choosefile"
           />
           <div className="image-preview-container">
             {formData.productImages.map((image, index) => (
@@ -133,7 +159,6 @@ const ProductForm = () => {
             name="productDescription"
             value={formData.productDescription}
             onChange={handleChange}
-            className="textarea1000"
             required
           />
         </div>
@@ -243,7 +268,6 @@ const ProductForm = () => {
             name="review"
             value={formData.review}
             onChange={handleChange}
-            className="textarea1000"
             required
           />
         </div>
@@ -278,7 +302,7 @@ const ProductForm = () => {
             onChange={handleChange}
             required
           />
-        </div><br></br>
+        </div>
         <button type="submit" disabled={submitting}>
           {submitting ? "Adding Product..." : "Add Product"}
         </button>
