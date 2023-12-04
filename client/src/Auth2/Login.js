@@ -6,14 +6,34 @@ import { MdOutlineRemoveRedEye  } from "react-icons/md";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import jwt_decode from 'jwt-decode';
 import useAuth from './useAuth'; // Import the useAuth hook
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [message, setMessage] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  
 
   const navigate = useNavigate();
   const { login } = useAuth(); // Use the login function from useAuth
+  
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+    const passwordInput = document.getElementById('password-input');
+  
+    if (passwordInput) {
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    }
+  };
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -69,13 +89,21 @@ const Login = () => {
               <div className="loginfield1 logininput-field1">
                 <input
                   type="password"
+                  id="password-input"
                   name="password" // Add name attribute for form submission
                   placeholder="Password"
                   className="loginpassword1"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                /><span className="login-icon21" 
-                ><MdOutlineRemoveRedEye className='eyeicon1' /></span>
+                />            
+                <span className='profile-password' onClick={togglePasswordVisibility}>
+                {showPassword ? (
+                  <FontAwesomeIcon icon={faEyeSlash} />
+                ) : (
+                  <FontAwesomeIcon icon={faEye} />
+                )}
+              </span>
+                                      
               </div>
 
              
@@ -99,16 +127,6 @@ const Login = () => {
             <div className='login-or'>
               <div className='login-hr1'/><div className='or'>or</div><div className='login-hr2'/>
             </div>
-            {/* <div className="loginform-link1">
-              <span>
-                <strong>
-                  Don't have an account?{' '}
-                  <Link className="loginspan1" to="/register">
-                    Signup
-                  </Link>
-                </strong>
-              </span>
-            </div> */}
           </div>
           
           {/* Google login */}
