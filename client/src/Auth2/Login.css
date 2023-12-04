@@ -44,7 +44,6 @@
 }
 .loginspan1{
   color: black;
-  
 }
 .loginspan1:hover{
   color:#000080; 
@@ -106,6 +105,7 @@
   width: 100%;
   padding-left: 8%;
   padding-top: 5%;
+  padding-bottom: 4%;
   
 }
 .loginbutton-field1 button {
