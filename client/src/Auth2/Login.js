@@ -74,8 +74,8 @@ const Login = () => {
                   className="loginpassword1"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                /><span className="icon2"
-                ><MdOutlineRemoveRedEye /></span>
+                /><span className="icon2" 
+                ><MdOutlineRemoveRedEye className='eyeicon1' /></span>
               </div>
 
              
