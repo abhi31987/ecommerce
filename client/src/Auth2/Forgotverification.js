@@ -24,8 +24,8 @@ function Forgotverification() {
         passwordInput.type = 'text';
       } else {
         passwordInput.type = 'password';
-      }
-    }
+  }
+}
 
   };
   const togglePasswordVisibility2 = () => {
@@ -37,8 +37,8 @@ function Forgotverification() {
         passwordInput.type = 'text';
       } else {
         passwordInput.type = 'password';
-      }
-    }
+  }
+}
   };
 
 
