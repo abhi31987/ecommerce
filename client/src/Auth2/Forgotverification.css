@@ -29,6 +29,7 @@
   /* border-radius: 20px; */
   /* margin: auto; */
  margin: auto;
+ margin-top: -1.5%;
   
 }
 
@@ -36,15 +37,20 @@
   padding: 2rem;
   /* margin: 20px; */
   height:55vh;
-  width: 70%;
+  width: 60%;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: 26%;
+  margin-left: 37%;
  position: relative;
  top: -10.2%;
   /* margin-top: 2.5%; */
   /* margin-bottom: 7%; */
+}
+
+
+.fgvpara{
+  color: rgb(142, 142, 142);
 }
 
 .fgv-field {
@@ -69,9 +75,21 @@
   align-items: center;
 }
 
-.icon1{
-  margin-left: 280px;
+ .icon1{
+  display: inline-block;
+  cursor: pointer;               
+  margin-left: 83%;               
+  margin-top: -20px;               
 }
+
+.input1{
+  padding: 1em;
+  margin-right: 1%;
+  border-left: transparent;
+  border-right: transparent;
+  border-top: transparent;
+  border: 1px solid rgb(10, 9, 9);
+} 
 
 .fgv-input-field input:focus {
   border-color: #8e44ad;
@@ -98,37 +116,48 @@
 
 /* Styles for smaller screens */
 @media (max-width: 768px) {
-  .fgv-bgcontainer {
-    flex-direction: column;
+  .fgv-bg1 {
+    width: 40%; /* Adjust width for better fit on smaller screens */
+    margin: auto;
   }
 
   .fgv-cardcontainer {
-    height: auto;
+    width: 70%;
+    margin-left: 20%;
+    margin-top: 0; /* Adjust top margin for better spacing */
+  }
+
+  .fgvpara {
+    font-size: 14px; /* Adjust font size for better readability */
   }
 
   .fgv-input-field input {
-    width: 100%;
+    width: 70%;
+    margin-right: 0; /* Remove margin for better fit */
   }
 
   .fgv-button-field button {
     width: 100%;
+    padding: 8px 15px; /* Adjust button padding */
   }
-  
-  
+
+  .icon1 {
+    margin-left: 80%; /* Adjust margin for icon position */
+  }
 }
 
 /* Styles for even smaller screens (e.g., smartphones) */
 @media (max-width: 480px) {
+  .fgv-bg1 {
+    width: 70%; /* Further adjust width for smaller screens */
+  }
+
   .fgv-cardcontainer {
-    padding: 20px;
+    padding: 15px; /* Adjust padding for better spacing */
   }
 
   .fgvheadername {
-    font-size: 24px;
-  }
-
-  .fgvpara {
-    margin-bottom: 30px;
+    font-size: 20px; /* Further reduce font size for smaller screens */
   }
 
   .fgv-input-field input {
@@ -136,6 +165,7 @@
   }
 
   .fgv-button-field button {
-    padding: 8px;
+    padding: 6px 12px; /* Adjust button padding */
   }
 }
+

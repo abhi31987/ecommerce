@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Forgotverification.css";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import axios from 'axios';
-import { FaRegEyeSlash } from "react-icons/fa";
+import { MdOutlineRemoveRedEye  } from "react-icons/md";
 
 function Forgotverification() {
   const [verificationCode, setVerificationCode] = useState('');
@@ -43,42 +43,48 @@ function Forgotverification() {
         </div> */}
         <h1 className="fgvheadername" style={{fontFamily:'verdana'}}>Reset Password</h1>
         
-        <p className="fgvpara">
+        <p className="fgvpara" >
           Create new password as you can login to your account
         </p>
         <form onSubmit={handleSubmit}>
-          <div className="fgv-field fgv-input-field">
-            {/* <label>New Password</label> */}
-            <FaRegEyeSlash className="icon1"/>
+          {/* <div className="fgv-field fgv-input-field">
+            <label>New Password</label> 
+            
             <input
+           
               type="text"
               placeholder="new password"
-              className="input"
+              className="input1"
               value={verificationCode}
               
               onChange={(e) => setVerificationCode(e.target.value)}
                />
-          </div>
+               <span className="icon1"
+               ><FaRegEyeSlash /></span>
+               
+          </div> */}
           <div className="fgv-field fgv-input-field">
             {/* <label>Confirm Password</label> */}
             <input
               type="password"
-              placeholder="Enter new password"
-              className="input"
+              placeholder="new password"
+              className="input1"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
-            />
+            /> <span className="icon1"
+            ><MdOutlineRemoveRedEye /></span>
           </div>
-          {/* <div className="fgv-field fgv-input-field">
-            <label>Confirm New Password</label>
+           <div className="fgv-field fgv-input-field">
+            {/* <label>Confirm New Password</label> */}
             <input
               type="password"
-              placeholder="Confirm new password"
-              className="input"
+              placeholder="Confirm password"
+              className="input1"
               value={confirmNewPassword}
               onChange={(e) => setConfirmNewPassword(e.target.value)}
-            />
-          </div> */}
+            /><span className="icon1"
+            ><MdOutlineRemoveRedEye /></span>
+          </div> 
           <div className="fgv-field fgv-button-field">
             <button className="button" type="submit">Submit</button>
           </div>
