@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Forgotverification.css";
-import { AiOutlineArrowLeft } from "react-icons/ai";
+// import { AiOutlineArrowLeft } from "react-icons/ai";
 import axios from 'axios';
 import { MdOutlineRemoveRedEye  } from "react-icons/md";
 

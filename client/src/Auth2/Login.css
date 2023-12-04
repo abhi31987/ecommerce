@@ -1,5 +1,5 @@
 .loginbgcontainer1 {
-  height: 71vh;
+  /* height: 71vh; */
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -15,14 +15,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  /* height: 80vh; */
   font-family: Verdana;
   background-image: url('https://s3-alpha-sig.figma.com/img/0b0d/7354/18892239591f7ff7d30eae83d691fae2?Expires=1702252800&Signature=eBL55hSN2SghABudycoLTHwrCaBcYH2uj0VP7NSkXb~NGImxMpZ4KgbksshEPToK0uE5b0ipRyIRC2R8vtqfEqEvxtbrwhw9DizoXPaXftQTwWlfbo~DKcV6sQQdqPP0fvnlxi0aFPF77EJMBFi9LEdObGuKzWVe3DQPUNnC~9NG59EiNNEyb56bp~-JNBAQXxeqUP2hZh2nTiTYpxExvUXIu8HhFl29SATtpMOWhkPH0cyHwTkNQxXx7-NnW~Pc9tfKsa2IOlkZ8V58PXRQX72odCwsbR~-yrd9ROZiH6WEAz3T1CTf3~JBh7VKs2Osz-4BIt-2zeXA3hjQRoHzCQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
   background-size: cover;
   background-position: center;
 }
 .logincontainer2{
-  height: 60vh;
+  /* height: 60vh; */
   width: 100%;
   background-color: #fff;
   border-radius: 5%;
@@ -33,7 +33,7 @@
   background-color:transparent;
   max-width: 600px;
   width: 130%;
-  height:85%;
+  /* height:85%; */
   margin-top: 50px;
   border-radius: 5%; 
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
@@ -44,7 +44,6 @@
 }
 .loginspan1{
   color: black;
-  
 }
 .loginspan1:hover{
   color:#000080; 
@@ -104,8 +103,9 @@
 .loginform-link1 {
   color: black;
   width: 100%;
-  padding-left: 8%;
+  padding-left: 13%;
   padding-top: 5%;
+  padding-bottom: 4%;
   
 }
 .loginbutton-field1 button {
@@ -130,7 +130,8 @@
 .login-icon21{
   display: inline-block;
   cursor: pointer;               
-  margin-left: 90%;                
+  /* margin-left: 80%;  
+  margin-top: -50%;               */
 }
 .eyeicon1{
   color: black;
