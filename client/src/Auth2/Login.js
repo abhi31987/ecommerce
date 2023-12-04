@@ -96,7 +96,7 @@ const Login = () => {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />            
-                <span className='profile-password' onClick={togglePasswordVisibility}>
+                <span className='login-icon21' onClick={togglePasswordVisibility}>
                 {showPassword ? (
                   <FontAwesomeIcon icon={faEyeSlash} />
                 ) : (
@@ -148,7 +148,7 @@ const Login = () => {
                  <div className="loginform-link1">
               <span>
                   Don't have an account?{' '}
-                  <strong>
+                <strong>
                   <Link className="loginspan1" to="/register">
                     Register
                   </Link>
