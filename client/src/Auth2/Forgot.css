@@ -15,11 +15,11 @@
     background-image:url( 'https://s3-alpha-sig.figma.com/img/0b0d/7354/18892239591f7ff7d30eae83d691fae2?Expires=1702252800&Signature=eBL55hSN2SghABudycoLTHwrCaBcYH2uj0VP7NSkXb~NGImxMpZ4KgbksshEPToK0uE5b0ipRyIRC2R8vtqfEqEvxtbrwhw9DizoXPaXftQTwWlfbo~DKcV6sQQdqPP0fvnlxi0aFPF77EJMBFi9LEdObGuKzWVe3DQPUNnC~9NG59EiNNEyb56bp~-JNBAQXxeqUP2hZh2nTiTYpxExvUXIu8HhFl29SATtpMOWhkPH0cyHwTkNQxXx7-NnW~Pc9tfKsa2IOlkZ8V58PXRQX72odCwsbR~-yrd9ROZiH6WEAz3T1CTf3~JBh7VKs2Osz-4BIt-2zeXA3hjQRoHzCQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
     padding: 2rem;
     border-radius: 20px;
-    width: 40%;
+    width: 35%;
     margin-bottom: 50px;
-    margin-top: -10px;
+    margin-top: -11px;
     margin-right: 290px;
-    height: 390px;
+    height:391px;
    
     /* background-color: red; */
   }
@@ -52,8 +52,9 @@
   } */
   .fgpara {
     margin-bottom: 40px;
-    color: lightgray;
+    color: rgb(117, 115, 115);
     font-weight: bold;
+    text-align: center;
   }
   .fg-field {
     align-items: center;
@@ -75,11 +76,16 @@
   .fg-button-field button {
     width: 100%;
     padding: 10px;
-    background-color: grey;
+    background-color: #111133;
+    
     color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+  }
+  .fg-button-field button :hover{
+    background-color: white;
+    color: black;
   }
   .backtologin {
     
