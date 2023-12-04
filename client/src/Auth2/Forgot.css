@@ -1,9 +1,10 @@
 .fg-bgcontainer {
     /* background-color: aliceblue; */
     /* background-image: url(forgot-back.png); */
-    height: 100vh;
+    /* height: 100vh; */
     width: 100vw;
     display: flex;
+    margin-top: 3%;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -26,22 +27,24 @@
     /* background-color: #ffffff; */
     padding: 30px;
     margin: 20px;
-    height: 60vh;
+    /* height: 60vh; */
     width: 80%;
+    height: 395px;
     /* width: "100%"; */
     border-radius: 20px;
     background-color: white;
     color: black;
     margin-left: 50%;
-    margin-top: -31px;
+    margin-top: -32px;
     
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   }
   .fg-field {
     margin-bottom: 20px;
     
   }
   .fgheadername {
+    text-align: center;
     color: black;
   }
   /* label{
@@ -53,6 +56,7 @@
     font-weight: bold;
   }
   .fg-field {
+    align-items: center;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
@@ -79,13 +83,13 @@
   }
   .backtologin {
     
-    margin-left: 150px;
+    
     margin-top: 30px;
 
   }
   .or-line {
     color: black;
-    margin-left: 190px;
+    /* margin-left: 190px; */
     margin-top: 30px;
   }
   
