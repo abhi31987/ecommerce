@@ -93,13 +93,6 @@
   margin-top: -3%;
 }
 
-.loginpassword1 .eye-icon {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-}
 .loginform-link1 {
   color: black;
   width: 100%;
@@ -130,13 +123,8 @@
 .login-icon21{
   display: inline-block;
   cursor: pointer;               
-  /* margin-left: 80%;  
-  margin-top: -50%;               */
-}
-.eyeicon1{
   color: black;
 }
- 
 .loginline11 {
   display: flex; 
   justify-content: space-between; 
