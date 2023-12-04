@@ -45,11 +45,10 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: 35%;
  position: relative;
-<<<<<<< HEAD
- top: -12.2%;
-=======
- top: -1%;
->>>>>>> 946c7642cad5fd8536b06457a4c46a4b631179e2
+ /* top: -12.2%;
+
+ top: -1%; */
+
   /* margin-top: 2.5%; */
   /* margin-bottom: 7%; */
 }
