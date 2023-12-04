@@ -1,12 +1,14 @@
  .fgv-bg1{
   background-image: url('https://s3-alpha-sig.figma.com/img/0b0d/7354/18892239591f7ff7d30eae83d691fae2?Expires=1702252800&Signature=eBL55hSN2SghABudycoLTHwrCaBcYH2uj0VP7NSkXb~NGImxMpZ4KgbksshEPToK0uE5b0ipRyIRC2R8vtqfEqEvxtbrwhw9DizoXPaXftQTwWlfbo~DKcV6sQQdqPP0fvnlxi0aFPF77EJMBFi9LEdObGuKzWVe3DQPUNnC~9NG59EiNNEyb56bp~-JNBAQXxeqUP2hZh2nTiTYpxExvUXIu8HhFl29SATtpMOWhkPH0cyHwTkNQxXx7-NnW~Pc9tfKsa2IOlkZ8V58PXRQX72odCwsbR~-yrd9ROZiH6WEAz3T1CTf3~JBh7VKs2Osz-4BIt-2zeXA3hjQRoHzCQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
-   height: 52.8vh;
+  /* height: 55vh; */
    width: 39%;
   /* width: 100%;  */
   /* margin-left: 50%; */
   border-radius: 15px;
   /* margin-left: 20%; */
-  padding: 2.5rem;
+  /* padding: 2.5rem; */
+  margin-top: 8%;
+  margin-bottom: 8%;
 
   
 } 
@@ -17,7 +19,7 @@
 .fgv-bgcontainer {
   /* background-image: url(forgot-back.png); */
   
-  height: 100vh;
+
   width: 100vw;
   display: flex;
   flex-direction: row;
@@ -36,14 +38,14 @@
 .fgv-cardcontainer {
   padding: 2rem;
   /* margin: 20px; */
-  height:55vh;
+  /* height: 55vh; */
   width: 60%;
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: 37%;
  position: relative;
- top: -10.2%;
+ top: -1%;
   /* margin-top: 2.5%; */
   /* margin-bottom: 7%; */
 }
@@ -62,12 +64,13 @@
 .fgv-input-field input {
   width: 95%;
   padding: 10px;
-  border: 1px solid #3d48e3;
+  border: 1px solid rgb(165, 163, 163); 
   border-radius: 0px;
   transition: border-color 0.3s ease-in-out;
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
+  outline-width: 0px;
   
 }
 .fgv-input-field{
@@ -92,7 +95,8 @@
 } 
 
 .fgv-input-field input:focus {
-  border-color: #8e44ad;
+  /* border-color: #8e44ad; */
+  border-color: grey;
 }
 
 .fgv-button-field button {
@@ -106,7 +110,7 @@
 }
 
 .fgv-button-field button:hover {
-  background-color: #8e44ad;
+  background-color:#9b8bf4;
 }
 
 .fgv-message {
@@ -122,7 +126,7 @@
   }
 
   .fgv-cardcontainer {
-    width: 70%;
+    width: 80%;
     margin-left: 20%;
     margin-top: 0; /* Adjust top margin for better spacing */
   }
@@ -149,11 +153,13 @@
 /* Styles for even smaller screens (e.g., smartphones) */
 @media (max-width: 480px) {
   .fgv-bg1 {
-    width: 70%; /* Further adjust width for smaller screens */
+    width: 70%;
+    height: 55vh; /* Further adjust width for smaller screens */
   }
 
   .fgv-cardcontainer {
-    padding: 15px; /* Adjust padding for better spacing */
+    padding: 15px;
+    height: 55vh; /* Adjust padding for better spacing */
   }
 
   .fgvheadername {
