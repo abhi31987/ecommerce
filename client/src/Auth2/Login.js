@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Login.css';
+import { MdOutlineRemoveRedEye  } from "react-icons/md";
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import jwt_decode from 'jwt-decode';
 import useAuth from './useAuth'; // Import the useAuth hook
@@ -73,7 +74,8 @@ const Login = () => {
                   className="loginpassword1"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                />
+                /><span className="icon2"
+                ><MdOutlineRemoveRedEye /></span>
               </div>
 
              
