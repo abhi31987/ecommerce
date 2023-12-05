@@ -38,7 +38,8 @@ export default class ContactUs extends Component {
         <h1 className="head">Contact Us</h1>
 
         <div className="contact-container">
-          
+         
+            
           <form
             action="#"
             method="POST"
@@ -101,12 +102,14 @@ export default class ContactUs extends Component {
               Submit
             </button>
           </form>
+     
 
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.770356786728!2d77.51560167379478!3d12.922475987388404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e21c103985b%3A0x7af7b0258b8258fa!2sMatrical%20Technologies!5e0!3m2!1sen!2sin!4v1682603452282!5m2!1sen!2sin"
-            width="50%"
-            height="400px"
-            style={{ border: "0",marginLeft:'20px',boxShadow:'0 0 20px grey' }}
+            width="38%"
+            height="438px"
+            
+            style={{ border: "0",borderRadius:'10px',  marginLeft:'1px',boxShadow:'0 0 20px grey' }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

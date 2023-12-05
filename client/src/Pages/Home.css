@@ -1,19 +1,16 @@
-
-
-.homesection1 {
+.homesection12345 {
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: center;
 width: 600px;
 height: 80px;
-float: right;
-margin-right: 1.1%;
 position: relative;
-top: -1em;
-
+margin-left: 27%;
+/* top: -1em; */
+margin-top: 3%;
 }
 
-.homesection1 div {
+.homesection12345 div {
 color: rgb(0, 0, 0);
 font-size: 17px;
 font-weight: bold;
@@ -84,7 +81,8 @@ margin-top: 5px;
   font-size: 30px;
   font-weight: 700;
   margin-right: auto; /* Push "Best Sellers" to the left */
-  margin-left: 5px;
+  margin-left: 3%;
+  margin-top: 2%;
 }
 
 .browse-all-container {
@@ -208,7 +206,7 @@ margin-left: -100px;
   border-radius: 15px;
   padding: 5px 50px;
   margin-bottom: 60px;
-  margin-left: 500px;
+  margin-left: 53%;
   margin-top: 55px;
   justify-content: center;
 }
@@ -380,11 +378,6 @@ margin-top: 5px;
 .review-text {
   white-space: normal; /* Allow text to wrap within the box */
 }
-
-
-
-
-
 .subscribe-mail {
   flex-direction: column;
   width: auto;
@@ -423,4 +416,9 @@ margin-top: 5px;
   height: auto;
   margin-left: 10px;
 }
+}
+@media screen and (max-width: 425px) {
+  .homesection1234 {
+    margin-left: 19%;
+    }
 }

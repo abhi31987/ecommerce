@@ -142,7 +142,7 @@ const ProductForm = () => {
             required
             className="productform-choosefile"
           />
-          <div className="image-preview-container">
+          {/* <div className="image-preview-container">
             {formData.productImages.map((image, index) => (
               <div key={index} className="image-preview">
                 <img
@@ -151,7 +151,7 @@ const ProductForm = () => {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
         <div>
           <label>Product Description:</label>

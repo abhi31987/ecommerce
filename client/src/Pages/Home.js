@@ -23,7 +23,7 @@ function Home() {
     <div className="home-main-body">
       <section>
         <ImageCarousel />
-        <div className="homesection1">
+        <div className="homesection12345">
           <div className="section-item">
             <FaTruck className="home-icon" />
             <div className="section-text">
