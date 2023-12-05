@@ -66,7 +66,7 @@ function Home() {
               {" "}
               {/* Replace "/products/productId" with the actual path to the product details page */}
               <img src={require("../Assets/box-image1.jpg")} alt="Product 1" />
-              <button className="buy-now-box-button1">Buy Now </button>
+              {/* <button className="buy-now-box-button1">Buy Now </button> */}
             </Link>
           </div>
 
@@ -74,7 +74,7 @@ function Home() {
           <Link to="/products/64d5afade78160215db31933">
               {" "}
             <img src={require("../Assets/box-image2.jpg")} alt="Product 2" />
-            <button className="buy-now-box-button2">Buy Now </button>
+            {/* <button className="buy-now-box-button2">Buy Now </button> */}
             </Link>
           </div>
         </div>
@@ -94,7 +94,7 @@ function Home() {
                 placeholder="Email Address"
               />
               <button className="telegram-button">
-                <FaTelegramPlane style={{ fontSize: "34px", color: "white" }} />
+                <FaTelegramPlane  className='telegram-icon' style={{ fontSize: "34px", color: "white" }} />
               </button>
             </div>
             <div className="subscribe-text">Subscribe newsletter</div>
