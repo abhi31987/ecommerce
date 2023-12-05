@@ -224,7 +224,7 @@ const ProductDetails = () => {
           <hr />
 
           <div className="sp-info">
-            <h3>SPECIFIC INFORMATION</h3>
+            <h3 className="spee">SPECIFIC INFORMATION</h3>
             <div className="info-columns">
               <div className="left-column">
                 <div className="row">
@@ -285,7 +285,7 @@ const ProductDetails = () => {
 
           <hr />
           <div className="review-box">
-            <h3>Write a Review</h3>
+            <h3 className="spee">Write a Review</h3>
             <form className="review-form" /*onSubmit={handleSubmitReview}*/>
   {/* Review form inputs */}
   <textarea name="reviewText" placeholder="Write your review..." />
