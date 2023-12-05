@@ -5,7 +5,7 @@
   
 }
 .span1:hover{
-  color:#05ed01;
+  color:#000080;
   
 }
 
@@ -16,9 +16,9 @@
   margin-top: 2%;
   margin-bottom: 2%;  
   border-radius: 1rem;
-  padding: 1px;
   overflow: hidden;
   box-sizing: border-box;
+  border: 1px black solid;
   
 }
 .forms1{
@@ -27,8 +27,6 @@
   border-radius: 1rem;
   background-color: white;
   margin-left: 35%;
-
-  border-left: 1px black solid;
 }
 .Headername1 {
   color:black;
