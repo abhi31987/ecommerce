@@ -12,15 +12,15 @@
   
    .contact-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
-      /* width: 100%; */
+       width: 100%; 
    }
   
    .contact-form {
       width: 35%;
       margin-bottom: 20px;
-      height: 60vh;
+      height: 70vh;
    }
   
    .cts-btn-success {
@@ -31,11 +31,11 @@
       border: none;
       cursor: pointer;
       font-size: 16px;
-      margin-top: 10px;
+      margin-top: 0px;
    }
    .i1{
-      width: 43%;
-      height: 64vh;
+      width: 40%;
+      height: 75vh;
       margin-bottom: 20px;
    }
 
