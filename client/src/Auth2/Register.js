@@ -4,7 +4,8 @@ import axios from 'axios';
 import './Register.css';
 import { GoogleOAuthProvider, GoogleLogin } from '@react-oauth/google';
 import jwt_decode from 'jwt-decode';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -13,6 +14,38 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [setpassword,SetConformpassword] = useState(false);
+
+
+
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+    const passwordInput = document.getElementById('password-input1');
+  
+    if (passwordInput) {
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+  }
+}
+
+  };
+  const togglePasswordVisibility2 = () => {
+    SetConformpassword((prev) => !prev);
+    const passwordInput = document.getElementById('password-input2');
+  
+    if (passwordInput) {
+      if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+  }
+}
+  };
+
 
   const isNameValid = name.trim() !== '';
   const isPhoneNumberValid = /^[0-9]{10}$/.test(phoneNumber);
@@ -76,6 +109,14 @@ const Register = () => {
     }
   };
 
+
+  
+
+
+
+
+
+
   return (
     <div className="bgRegistercontainermain">
      <div className='bgRegistercontainer1' >
@@ -110,23 +151,61 @@ const Register = () => {
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
+
+
+
             <div className="field1 input-field1">
+            <span className='icon2v' onClick={togglePasswordVisibility}>
+            {showPassword ? (
+              <FontAwesomeIcon icon={faEyeSlash} />
+            ) : (
+              <FontAwesomeIcon icon={faEye} />
+            )}
+          </span>
+    
+
+
+
               <input
                 type="password"
+                id='password-input1'
                 placeholder="Password"
                 className={`password1 ${!isPasswordValid.isValid ? 'invalid' : ''}`}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
+
+
+
             <div className="field1 input-field1">
+           
+            <span className='icon2v' onClick={togglePasswordVisibility2}>
+            {setpassword ? (
+              <FontAwesomeIcon icon={faEyeSlash} />
+            ) : (
+              <FontAwesomeIcon icon={faEye} />
+            )}
+          </span>
+    
+    
+
+
               <input
                 type="password"
+                id='password-input2'
                 placeholder="Confirm Password"
                 className="confirmpassword"
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
               />
+              
+
+
+
+
+
+
               {errorMessage && <p className="error-message">{errorMessage}</p>}
             </div>
             <div className="field1 button-field1">
@@ -139,9 +218,9 @@ const Register = () => {
             <p className="para1">Or</p>
            
           
-          <div className="log-google google-login-container">
+          <div className="googlecontainer-register" >
         <GoogleOAuthProvider clientId="476717558763-pbbvpjdugi7ium3eprbclkqn8f61hllf.apps.googleusercontent.com">
-          <GoogleLogin
+          <GoogleLogin 
             onSuccess={(credentialResponse) => {
               const details = jwt_decode(credentialResponse.credential);
               console.log(details);
