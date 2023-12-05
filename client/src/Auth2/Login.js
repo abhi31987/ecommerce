@@ -21,7 +21,7 @@ const Login = () => {
   
 
   const togglePasswordVisibility = () => {
-    setShowPassword((prev) => !prev);
+    setShowPassword((prev) => !prev); 
     const passwordInput = document.getElementById('password-input');
   
     if (passwordInput) {

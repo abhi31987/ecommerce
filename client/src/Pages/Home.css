@@ -6,8 +6,8 @@ align-items: center;
 justify-content: space-around;
 width: 600px;
 height: 80px;
-float: right;
-margin-right: 1.1%;
+float: left;
+margin-left: 27%;
 position: relative;
 top: -1em;
 
@@ -84,7 +84,8 @@ margin-top: 5px;
   font-size: 30px;
   font-weight: 700;
   margin-right: auto; /* Push "Best Sellers" to the left */
-  margin-left: 5px;
+  margin-left: 3%;
+  margin-top: 2%;
 }
 
 .browse-all-container {
@@ -208,7 +209,7 @@ margin-left: -100px;
   border-radius: 15px;
   padding: 5px 50px;
   margin-bottom: 60px;
-  margin-left: 500px;
+  margin-left: 53%;
   margin-top: 55px;
   justify-content: center;
 }
