@@ -1,19 +1,16 @@
-
-
-.homesection1 {
+.homesection1234 {
 display: flex;
 align-items: center;
-justify-content: space-around;
+justify-content: center;
 width: 600px;
 height: 80px;
-float: left;
-margin-left: 27%;
 position: relative;
-top: -1em;
-
+margin-left: 27%;
+/* top: -1em; */
+margin-top: 3%;
 }
 
-.homesection1 div {
+.homesection1234 div {
 color: rgb(0, 0, 0);
 font-size: 17px;
 font-weight: bold;
@@ -381,11 +378,6 @@ margin-top: 5px;
 .review-text {
   white-space: normal; /* Allow text to wrap within the box */
 }
-
-
-
-
-
 .subscribe-mail {
   flex-direction: column;
   width: auto;
@@ -424,4 +416,9 @@ margin-top: 5px;
   height: auto;
   margin-left: 10px;
 }
+}
+@media screen and (max-width: 425px) {
+  .homesection1234 {
+    margin-left: 19%;
+    }
 }
