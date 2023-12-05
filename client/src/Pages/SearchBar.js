@@ -17,7 +17,7 @@ const SearchBar = () => {
     console.log('Searching...');
     if (searchValue.length >= 3) {
       try {
-        const response = await axios.get(`/api/search?query=${searchValue}`);
+        const response = await axios.get(`http://localhost:5555/api/search?query=${searchValue}`);
         setSearchResults(response.data);
       } catch (error) {
         console.error('Error searching:', error);

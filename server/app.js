@@ -3,10 +3,11 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
-const productRoutes = require('./routes/productRoutes'); // Import productRoutes
+const productRoutes = require('./routes/productRoutes'); 
 const addProductRoutes = require('./routes/addProductRoutes');
 const addressRoutes = require('./routes/addressRoutes');
 const forgotRoutes = require('./routes/forgotRoutes');
+const searchRoutes = require('./routes/searchRoutes');
 
 const app = express();
 app.use(cors());
@@ -42,6 +43,12 @@ app.use('/api', addressRoutes);
 
 // Use the forgot password routes
 app.use('/api', forgotRoutes);
+app.use('/api/search', searchRoutes);
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something went wrong!');
+});
 
 const PORT = process.env.PORT || 5555;
 app.listen(PORT, () => {
