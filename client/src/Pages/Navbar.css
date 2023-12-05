@@ -216,3 +216,55 @@ body {
     transition: 0.4s;
   }
 }
+
+ @media (max-width: 425px) {
+  .container {
+    padding: 0 10px; /* Adjusted padding for the container */
+  }
+
+  .logo {
+    font-size: 14px; /* Adjusted font size for the logo */
+  }
+
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: 60px; /* Adjusted top position for the nav items */
+    left: 0;
+    right: 0;
+    z-index: 1;
+    /* display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')}; */
+  }
+
+  .search-box {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .burger-menu.open .bar1,
+  .burger-menu.open .bar2,
+  .burger-menu.open .bar3 {
+    background-color: #fff;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    width: 20px; /* Adjusted width for the burger menu bars */
+    height: 2px; /* Adjusted height for the burger menu bars */
+    background-color: #333;
+    margin: 4px 0;
+    transition: 0.4s;
+  }
+
+  .menu-icons {
+    display: none;
+  }
+
+ }
