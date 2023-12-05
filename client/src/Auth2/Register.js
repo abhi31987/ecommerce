@@ -219,7 +219,7 @@ const Register = () => {
            
           
           <div className="googlecontainer-register" >
-        <GoogleOAuthProvider clientId="476717558763-pbbvpjdugi7ium3eprbclkqn8f61hllf.apps.googleusercontent.com">
+        <GoogleOAuthProvider  clientId="476717558763-pbbvpjdugi7ium3eprbclkqn8f61hllf.apps.googleusercontent.com">
           <GoogleLogin 
             onSuccess={(credentialResponse) => {
               const details = jwt_decode(credentialResponse.credential);
