@@ -1,36 +1,39 @@
-import React, { Component } from "react";
+import React, { Component }  from "react";
+
 import "./ContactUs.css";
 
 export default class ContactUs extends Component {
-  constructor() {
-    super();
-    this.state = {
-      participate: "",
-      Designation: "",
-      course: "",
-      number: null,
-    };
-  }
+  
+
+
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     participate: "",
+  //     Designation: "",
+  //     course: "",
+  //     number: null,
+  //   };
+  // }
 
   submitHandler = (event) => {
     event.preventDefault();
-    alert(
-      `Name : ${this.state.participate}\nDesignation is : ${this.state.Designation}\nCourse : ${this.state.course}\nMobile :${this.state.number} `
-    );
+    alert('Submitted Succesfully');
+    
   };
 
-  changeHandler = (event) => {
-    let nam = event.target.name;
-    let number = event.target.value;
+  // changeHandler = (event) => {
+  //   let nam = event.target.name;
+  //   let number = event.target.value;
 
-    if (nam === "number") {
-      if (!Number(number)) {
-        alert("Number should not be a character");
-        return;
-      }
-    }
-    this.setState({ [nam]: number });
-  };
+  //   if (nam === "number") {
+  //     if (!Number(number)) {
+  //       alert("Number should not be a character");
+  //       return;
+  //     }
+  //   }
+  //   this.setState({ [nam]: number });
+  // };
 
   render() {
     return (
@@ -68,6 +71,7 @@ export default class ContactUs extends Component {
                 placeholder="Enter Your Last Name"
                 required
                 onChange={this.changeHandler}
+               
               />
             </div>
 
@@ -106,10 +110,10 @@ export default class ContactUs extends Component {
 
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.770356786728!2d77.51560167379478!3d12.922475987388404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e21c103985b%3A0x7af7b0258b8258fa!2sMatrical%20Technologies!5e0!3m2!1sen!2sin!4v1682603452282!5m2!1sen!2sin"
-            width="38%"
+            width="37%"
             height="437px"
-            
-            style={{ border: "0",borderRadius:'8px',  marginLeft:'1px',boxShadow:'0 0 20px grey' }}
+            className="i1"
+            style={{ border: "0",borderRadius:'8px',  marginLeft:'0px',boxShadow:'0 0 20px grey' }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
