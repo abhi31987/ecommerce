@@ -133,7 +133,7 @@ const ProductDetails = () => {
         <p>{error}</p>
       ) : (
         <div>
-          <h2>{productDetails.productName}</h2>
+          {/* <h2>{productDetails.productName}</h2> */}
           <div className="product-images">
             {productDetails.productImages &&
             productDetails.productImages.length > 0 ? (
@@ -214,7 +214,7 @@ const ProductDetails = () => {
 
           <hr className="hr-1" />
           <div className="name-2">
-            <h2>{productDetails.productName}</h2>
+            <h2 >{productDetails.productName}</h2>
             <hr />
           </div>
           <div className="prod-info">
