@@ -27,7 +27,7 @@ const ContactUs =()=> {
     try {
       console.log('contactdata:', contactdata); // Log the form data
       // Send formData to backend
-      await axios.post('http://localhost:503/contact', contactdata);
+      await axios.post('http://localhost:5555/contact', contactdata);
   
       // Redirect on success
       // navigate('/');
