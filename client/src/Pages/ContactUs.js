@@ -1,41 +1,46 @@
-import React, { Component }  from "react";
-
+import React, { useState  } from "react";
+import axios from "axios";
 import "./ContactUs.css";
 
-export default class ContactUs extends Component {
+const ContactUs =()=> {
   
+  const[contactdata,Setcontactdata]=useState({
+    Firstname:'',
+    Lastname:'',
+    Email:'',
+    Mobile:'',
+    Message:''
+  })
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
 
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     participate: "",
-  //     Designation: "",
-  //     course: "",
-  //     number: null,
-  //   };
-  // }
-
-  submitHandler = (event) => {
-    event.preventDefault();
-    alert('Submitted Succesfully');
-    
+    Setcontactdata({
+      ...contactdata,
+      [name]: value,
+    });
   };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    alert('Subbmitted Succesfully')
+    console.log("Contact form data" , contactdata)
+    try {
+      console.log('contactdata:', contactdata); // Log the form data
+      // Send formData to backend
+      await axios.post('http://localhost:503/contact', contactdata);
+  
+      // Redirect on success
+      // navigate('/');
+    } catch (err) {
+      console.error('Error:', err.response.data); // Log the error response details
+  
+      // Show an alert with the error message
+      window.alert('Error: ${err.response.data.error}');
 
-  // changeHandler = (event) => {
-  //   let nam = event.target.name;
-  //   let number = event.target.value;
-
-  //   if (nam === "number") {
-  //     if (!Number(number)) {
-  //       alert("Number should not be a character");
-  //       return;
-  //     }
-  //   }
-  //   this.setState({ [nam]: number });
-  // };
-
-  render() {
+    }
+  }
+  
+ 
     return (
       <div className="total">
         <h1 className="head">Contact Us</h1>
@@ -47,18 +52,19 @@ export default class ContactUs extends Component {
             action="#"
             method="POST"
             className="contact-form"
-            id="contact-form"
-            onSubmit={this.submitHandler}
+            
+            onSubmit={handleSubmit}
           >
             <div className="form-group">
               <label htmlFor="First Name">First Name: </label>
               <input
                 type="text"
-                id="First Name"
-                name="participate"
+              
+                name="Firstname"
+                onChange={handleChange}
                 placeholder="Enter Your First Name"
                 required
-                onChange={this.changeHandler}
+                
               />
             </div>
 
@@ -66,11 +72,12 @@ export default class ContactUs extends Component {
               <label htmlFor="Last Name">Last Name:</label>
               <input
                 type="text"
-                id="Last Name"
-                name="Last Name"
+             
+                name="Lastname"
+                onChange={handleChange}
                 placeholder="Enter Your Last Name"
                 required
-                onChange={this.changeHandler}
+             
                
               />
             </div>
@@ -79,28 +86,30 @@ export default class ContactUs extends Component {
               <label htmlFor="Your Email Id">Email ID:</label>
               <input
                 type="text"
-                id="Email Id"
-                name="Email Id"
+               
+                name="Email"
+                onChange={handleChange}
                 placeholder="Enter Your Email Id"
                 required
-                onChange={this.changeHandler}
+              
               />
             </div>
 
             <div className="form-group">
               <label htmlFor="number">Mobile:</label>
               <input
-                type="text"
-                id="number"
-                name="number"
+                type="number"
+              
+                name="Mobile"
+                onChange={handleChange}
                 placeholder="Enter Your Mobile Nubmer"
                 required
-                onChange={this.changeHandler}
+              
               />
             </div>
             <div className="form-group">
               <label htmlFor="message">Message:</label>
-              <textarea id="message" required />
+              <textarea id="message" name="Message"  onChange={handleChange} required />
             </div>
             <button className="cts-btn-success" type="submit">
               Submit
@@ -123,4 +132,4 @@ export default class ContactUs extends Component {
       </div>
     );
   }
-}
+export default ContactUs;

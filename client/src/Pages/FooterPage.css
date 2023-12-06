@@ -66,19 +66,32 @@
 /* Media queries for responsiveness */
 
 /* Mobile view */
-@media (max-width: 767px) {
+@media (max-width: 425px) {
   .footer-wrapper {
     flex-direction: column;
     align-items: center;
   }
+  .footer-wrapper {
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    /* margin: 0 auto; */
+    margin-left: 17%;
+  }
   
   .footer-section {
-    flex-basis: auto;
+    flex-direction: row;
     width: 100%;
     text-align: center;
     padding: 10px 0;
   }
-  
+  .footer-container {
+    background-color: Black;
+    color: #fff;
+    padding: 44px 0;
+    width: 120%;
+}
   .social-media-icons {
     margin-left: 13rem;
   }
