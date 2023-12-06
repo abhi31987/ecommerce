@@ -76,9 +76,9 @@ function Navbar1v() {
 	};
 
 	return (
-		<header>
+		<header className="headervik">
 			<h3>E-Commerce</h3>
-			<nav ref={navRef}>
+			<nav className="navvik" ref={navRef}>
 				<a href="/">Home</a>
 				<a href="/#" >Categories</a>
 				<a href="/BlogPost">Blog</a>
@@ -89,16 +89,16 @@ function Navbar1v() {
 					onClick={showNavbar}>
 					<FaTimes />
 				</button>
-                <div className={`menu-icons ${isMenuOpen ? "hide" : ""}`}>
+          <div className="navvik-right" >
           <Link to="/ProductForm">
             <FontAwesomeIcon icon={faPlus} className="menu-icon" />
           </Link>
           <Link to="/cart">
             <FontAwesomeIcon
               icon={faShoppingCart}
-              className="menu-icon cart-tooltip"
+           
             />
-            <span className="cart-count">{totalQuantity}</span>
+            <span >{totalQuantity}</span>
           </Link>
           <div className="tooltip-container">
             <FontAwesomeIcon icon={faBell} className="menu-icon" />

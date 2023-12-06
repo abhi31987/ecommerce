@@ -1,56 +1,64 @@
-/* 
+
 :root {
 	--mainColor: #29335c;
 	--mainColorLight: #5767aa;
 	--secondaryColor: #db2b39;
 	--textColor: #eee;
 }
-
-header {
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.headervik {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
-	padding: 0 2rem;
-	background-color: var(--mainColor);
-	color: var(--textColor);
+	width: 100%;
+	padding: 1rem;
+	color: black;
+	background: whitesmoke;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	
 }
 
 nav a {
 	margin: 0 1rem;
-	color: var(--textColor);
+	color: black;
 	text-decoration: none;
 }
 
 nav a:hover {
-	color: var(--secondaryColor);
+	color: rgb(4, 4, 60);
 }
 
-header .nav-btn {
+.headervik .nav-btn {
 	padding: 5px;
 	cursor: pointer;
 	background: transparent;
 	border: none;
 	outline: none;
-	color: var(--textColor);
+	color: black;
 	visibility: hidden;
 	opacity: 0;
 	font-size: 1.8rem;
 }
 
-header div,
+.headervik div,
 nav {
 	display: flex;
 	align-items: center;
 }
 
 @media only screen and (max-width: 1024px) {
-	header .nav-btn {
+	.headervik .nav-btn {
 		visibility: visible;
 		opacity: 1;
 	}
 
-	header nav {
+	.headervik nav {
 		position: fixed;
 		top: -100vh;
 		left: 0;
@@ -61,11 +69,11 @@ nav {
 		align-items: center;
 		justify-content: center;
 		gap: 1.5rem;
-		background-color: var(--mainColor);
+		background-color: rgb(206, 202, 202);
 		transition: 1s;
 	}
 
-	header .responsive_nav {
+	.headervik .responsive_nav {
 		transform: translateY(100vh);
 	}
 
@@ -78,4 +86,4 @@ nav {
 	nav a {
 		font-size: 1.5rem;
 	}
-} */
+}
