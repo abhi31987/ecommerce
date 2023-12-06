@@ -34,6 +34,8 @@ const App = () => {
   return (
     <div>
       <AuthProvider>
+        
+
         <Router>
           <CartProvider>
             {/* <Navbar /> */}
