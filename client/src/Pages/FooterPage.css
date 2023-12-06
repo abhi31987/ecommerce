@@ -1,17 +1,19 @@
+/* FooterPage.css */
+
+/* Common styles for all screen sizes */
 .footer-container {
-  background-color:Black;
+  background-color: black;
   color: #fff;
   padding: 15px 0;
-  
+  text-align: center; /* Center-align all content */
 }
 
 .footer-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-around; /* Center-align items horizontally */
   max-width: 1200px;
-  /* margin: 0 auto; */
-  margin-left: 17%;
+  margin: 0 auto; /* Center-align the entire wrapper */
 }
 
 .footer-section {
@@ -37,25 +39,29 @@
   color: white;
 }
 
+/* Remove blue underlines from links */
+.footer-section a {
+  color: white;
+  text-decoration: none;
+}
+
 .social-media-icons {
   list-style: none;
   padding: 0;
   display: flex;
+  justify-content: center; /* Center-align social media icons */
 }
 
 .social-media-icons li {
-  /* margin-right: 10px;
-  background-color: white;
-  background: transparent;
-  color: white; */
   margin-right: 15px;
 }
-.social-media-icons li a{
+
+.social-media-icons li a {
   color: white;
+  text-decoration: none; /* Remove blue underlines from social media links */
 }
 
 .footer-bottom {
-  text-align: center;
   margin-top: 20px;
 }
 
@@ -63,45 +69,9 @@
   font-size: 14px;
 }
 
-/* Media queries for responsiveness */
-
-/* Mobile view */
-@media (max-width: 425px) {
-  .footer-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
-  .footer-wrapper {
-    /* display: flex; */
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    /* margin: 0 auto; */
-    margin-left: 17%;
-  }
-  
+/* Media query for screens with a maximum width of 425px */
+@media screen and (max-width: 425px) {
   .footer-section {
-    flex-direction: row;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
+    flex-basis: 100%; /* Full width for small screens */
   }
-  .footer-container {
-    background-color: Black;
-    color: #fff;
-    padding: 44px 0;
-    width: 120%;
-}
-  .social-media-icons {
-    margin-left: 13rem;
-  }
-}
-
-/* Tablet and Desktop view */
-@media (min-width: 768px) {
-  .footer-section {
-    flex-basis: 25%;
-  }
-  
-
 }

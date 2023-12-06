@@ -8,6 +8,7 @@ const addProductRoutes = require('./routes/addProductRoutes');
 const addressRoutes = require('./routes/addressRoutes');
 const forgotRoutes = require('./routes/forgotRoutes');
 const searchRoutes = require('./routes/searchRoutes');
+const contactRoutes = require('./routes/contactRoutes');
 
 const app = express();
 app.use(cors());
@@ -44,6 +45,9 @@ app.use('/api', addressRoutes);
 // Use the forgot password routes
 app.use('/api', forgotRoutes);
 app.use('/api/search', searchRoutes);
+
+// use the Contact us
+app.use('/contact', contactRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

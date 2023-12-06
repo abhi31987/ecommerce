@@ -7,11 +7,13 @@
    }
    
    .blog-section {
-    display: grid;
-    grid-template-columns: auto auto;
+    /* display: grid;
+    grid-template-columns: auto auto; */
     gap: 2rem;
     margin: 2rem;
     margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
    }
    
    .blog-text {
@@ -30,7 +32,8 @@
     margin: 30px 0;
    }
    .blog-text{
-    width: 100%;
+    width: 70%;
+    text-align: justify;
    }
    /* Image Styles */
    .blog-image-con {
@@ -48,7 +51,7 @@
    }
    
    /* Responsive Styles */
-   @media screen and (max-width: 768px) {
+   @media screen and (max-width: 426px) {
     .blog-title {
        font-size: 24px;
     }
