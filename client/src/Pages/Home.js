@@ -24,25 +24,25 @@ function Home() {
       <section>
         <ImageCarousel />
         <div className="homesection1">
-          <div className="section-item">
+          <div className="section-items">
             <FaTruck className="home-icon" />
             <div className="section-text">
               <span className="multiline">Free Shipping</span>
             </div>
           </div>
-          <div className="section-item">
+          <div className="section-items">
             <FaMoneyBillAlt className="home-icon" />
             <div className="section-text">
               <span className="multiline">Cash On Delivery</span>
             </div>
           </div>
-          <div className="section-item">
+          <div className="section-items">
             <FaStar className="home-icon" />
             <div className="section-text">
               <span className="multiline">Best Quality</span>
             </div>
           </div>
-          <div className="section-item">
+          <div className="section-items">
             <FaTags className="home-icon" />
             <div className="section-text">
               <span className="multiline">Best Discount</span>
