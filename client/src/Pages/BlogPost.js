@@ -29,7 +29,7 @@ const BlogPost = () => {
         <img className="blog-image" src={bg1} alt="Time and Thread" />
       </div>
       <div className='blog-text'>
-        <p   >
+        <p>
           In a world where the past and present intertwine, where history dances with modernity, few things embody the
           essence of this convergence as beautifully as sarees and textiles. A saree, an elegant piece of fabric that has
           adorned women for centuries, stands as a symbol of grace, culture, and tradition. From the grandiose weddings to
