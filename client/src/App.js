@@ -36,8 +36,8 @@ const App = () => {
       <AuthProvider>
         <Router>
           <CartProvider>
-            {/* <Navbar /> */}
-            <Navbar1v/>
+            <Navbar />
+            {/* <Navbar1v/> */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Login" element={<Login />} />
