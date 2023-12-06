@@ -148,7 +148,8 @@
     }
     .backtologin,
     .or-line {
-      margin-top: 15px; /* Reduced margin for better spacing on smaller screens */
+      margin-top: 15px;
+      color: red; /* Reduced margin for better spacing on smaller screens */
     }
   }
   

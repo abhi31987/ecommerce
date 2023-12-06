@@ -1,11 +1,14 @@
+
 import React from 'react';
 import './FooterPage.css';
+
 import { Link } from 'react-router-dom';
 import { scrollToTop } from "./scrollUtils";
 
+
 const Footer = () => {
   return (
-    <footer className="footer-container">
+    <div className="footer-container ">
       <div className="footer-wrapper">
         <div className="footer-section">
         <Link to="/information" onClick={scrollToTop}><h3>INFORMATION</h3>
@@ -60,7 +63,7 @@ const Footer = () => {
       <div className="footer-bottom"><hr/>
         <p>&copy; 2023 Your Ecommerce Store. All rights reserved.</p>
       </div>
-    </footer>
+    </div>
   );
 };
 
