@@ -2,60 +2,6 @@
 a{
   text-decoration: none;
 }
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif; /* Set font-family to match if available */
-}
-
-.navbar {
-  background: whitesmoke;
-  padding: 10px 0; /* Adjusted padding for the navbar */
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px; /* Adjusted padding for the container */
-}
-
-.logo{
- font-weight: bolder;
- font-size: 1.5rem;
-}
-
-.left-side {
-  display: flex;
-  align-items: center;
-}
-
-.nav-items {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0 20px; /* Adjusted padding for the nav items */
-  width: auto; /* Change the width to auto to allow items to expand */
-}
-
-.nav-item {
-  margin-right: 20px;
-  cursor: pointer;
-  color: black;
-  padding: 0 5px;
-  font-size: 18px;
-  text-decoration: none !important;
-  position: relative; /* Added for positioning sub-menu */
-}
-
-.nav-item a {
-  text-decoration: none !important;
-}
-
 .search-box {
   display: flex;
   align-items: center;
@@ -67,27 +13,12 @@ body {
 .search-box input {
   border: none;
   outline: none;
-  width: 300px;
   margin-right: 5px;
 }
 
 .search-icon {
   color: black;
   cursor: pointer;
-}
-
-.menu-icons {
-  display: flex;
-  align-items: center;
-  padding: 0 20px; /* Adjusted padding for the menu icons */
-}
-
-.menu-icon {
-  color: black;
-  font-size: 20px;
-  margin-left: 20px; /* Adjusted margin for the menu icon */
-  cursor: pointer;
-  position: relative; /* Needed for absolute positioning */
 }
 
 .tooltip-container {
@@ -97,7 +28,7 @@ body {
 .tooltip {
   position: absolute;
   top: 110%; /* Increase the distance from the icon */
-  left: 50%;
+  left: -200%;
   transform: translateX(-50%);
   background-color: white; /* Set the background color to white */
   color: #333; /* Set the text color */
@@ -115,156 +46,114 @@ body {
 .menu-icon:hover + .tooltip {
   opacity: 1; /* Increase opacity for better visibility */
 }
-
-.nav-item.categories {
-  position: relative;
+ 
+:root {
+	--mainColor: #29335c;
+	--mainColorLight: #5767aa;
+	--secondaryColor: #db2b39;
+	--textColor: #eee;
+}
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+.headervik {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+	padding: 1rem;
+	color: black;
+	background: whitesmoke;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	
 }
 
-.sub-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  padding: 10px;
-  z-index: 1;
-  list-style: none;
-  flex-direction: column; /* Adjusted to column */
-  width: 100%; /* Adjusted width for the sub-menu */
+.navvik a {
+	margin: 0 1rem;
+	color: black;
+	text-decoration: none;
 }
 
-.sub-menu li {
-  margin-right: 0; /* Remove margin from the sub-menu items */
+.navvik a:hover {
+	color: rgb(4, 4, 60);
 }
 
-.sub-menu a {
-  color: #333;
-  text-decoration: none;
-  transition: color 0.3s ease;
-
-  &:hover {
-    color: #007bff;
-  }
+.headervik .nav-btn {
+	padding: 5px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: black;
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
 }
 
-.nav-item.categories.active .sub-menu {
-  display: flex;
+.headervik,
+.navvik {
+	display: flex;
+	align-items: center;
 }
 
-.plus-dropdown {
-  position: relative;
+.navvik-right{
+	display: flex;
+	gap: 1rem;
+	color: black;
+	margin-right: 2rem;
+}
+.navvik-right a{
+	color: #000;
+}
+.nav-searchbarvik{
+	display: flex;
+	width:100%;
 }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-  padding: 10px;
-  z-index: 1;
-  list-style: none;
-  flex-direction: column; /* Adjusted to column */
-  width: 100%; /* Adjusted width for the dropdown */
+
+@media only screen and (max-width: 1024px) {
+	.headervik .nav-btn {
+		visibility: visible;
+		opacity: 1;
+	}
+	.navvik a{
+		margin: 0;
+	}
+	.search-box input {
+		width:100px;
+	}
+	
+
+	.headervik nav {
+		position: fixed;
+		top: -105vh;
+		left: 0;
+		height: 45%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1rem;
+		background-color: rgb(206, 202, 202);
+		transition: 1s;
+	}
+
+	.headervik .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	.navvik .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+	}
+
+	.navvik a {
+		font-size: 1rem;
+	}
+	
 }
-
-.plus-dropdown:hover .dropdown-content {
-  display: flex;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .nav-items {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    z-index: 1;
-  }
-
-  .nav-items.show {
-    display: flex;
-  }
-
-  .search-box {
-    display: none;
-  }
-
-  .burger-menu {
-    display: block;
-    cursor: pointer;
-  }
-
-  /* Burger menu styles */
-  .burger-menu.open .bar1,
-  .burger-menu.open .bar2,
-  .burger-menu.open .bar3 {
-    background-color: #fff;
-  }
-
-  .bar1,
-  .bar2,
-  .bar3 {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 6px 0;
-    transition: 0.4s;
-  }
-}
-
- @media (max-width: 425px) {
-  .container {
-    padding: 0 10px; /* Adjusted padding for the container */
-  }
-
-  .logo {
-    font-size: 14px; /* Adjusted font size for the logo */
-  }
-
-  .nav-items {
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    position: absolute;
-    top: 60px; /* Adjusted top position for the nav items */
-    left: 0;
-    right: 0;
-    z-index: 1;
-    /* display: ${({ isMenuOpen }) => (isMenuOpen ? 'flex' : 'none')}; */
-  }
-
-  .search-box {
-    display: none;
-  }
-
-  .burger-menu {
-    display: block;
-    cursor: pointer;
-  }
-
-  .burger-menu.open .bar1,
-  .burger-menu.open .bar2,
-  .burger-menu.open .bar3 {
-    background-color: #fff;
-  }
-
-  .bar1,
-  .bar2,
-  .bar3 {
-    width: 20px; /* Adjusted width for the burger menu bars */
-    height: 2px; /* Adjusted height for the burger menu bars */
-    background-color: #333;
-    margin: 4px 0;
-    transition: 0.4s;
-  }
-
-  .menu-icons {
-    display: none;
-  }
-
- }
