@@ -7,6 +7,8 @@
    }
    
    .blog-section {
+    /* display: grid;
+    grid-template-columns: auto auto; */
     gap: 2rem;
     margin: 2rem;
     margin-bottom: 40px;
@@ -57,7 +59,9 @@
     .blog-text {
        font-size: 16px;
     }
-   
+    .blog-section{
+        display: block;
+    }
     .blog-image{
         width: 100%;
     }
@@ -67,13 +71,4 @@
     .blog-text{
         width: 100%;
     }
-
-       
-   .blog-section {
-    gap: 2rem;
-    margin: 2rem;
-    margin-bottom: 40px; 
-    flex-direction: column;
-   }
-    
    }

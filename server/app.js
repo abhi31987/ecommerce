@@ -15,10 +15,10 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-const uri = 'mongodb://127.0.0.1:27017';
-const dbName = 'Ecommerce-mvc';
+const uri = 'mongodb+srv://nitinkaroshi1:nitin1234@cluster0.jyzn0mb.mongodb.net/';
+const dbName = 'Ecommercemvc';
 
-mongoose.connect(`${uri}/${dbName}`, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(`${uri}${dbName}`, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => {
     console.log('Connected to MongoDB');
   })

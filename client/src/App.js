@@ -28,7 +28,6 @@ import { AuthProvider } from "./Auth2/AuthProvider";
 import useAuth from './Auth2/useAuth';
 import Information from "./Pages/Information";
 import Shop from "./Pages/Shop";
-import Navbar1v from "./Navbar/Navbar1v";
 
 const App = () => {
   return (
@@ -38,8 +37,8 @@ const App = () => {
 
         <Router>
           <CartProvider>
-            {/* <Navbar /> */}
-            <Navbar1v/>
+            <Navbar />
+           
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/Login" element={<Login />} />
