@@ -15,16 +15,15 @@ app.use(cors());
 app.use(express.json());
 
 // Connect to MongoDB
-const uri = 'mongodb+srv://nitinkaroshi1:nitin1234@cluster0.jyzn0mb.mongodb.net/';
-const dbName = 'Ecommercemvc';
+const uri = 'mongodb://127.0.0.1:27017';
+const dbName = 'Ecommerce-mvc';
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
-mongoose.connect(`${uri}${dbName}`, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => {
-    console.log('Connected to MongoDB');
-  })
-  .catch((error) => {
-    console.error('MongoDB connection error:', error);
-  });
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log('MongoDB connection opened');
+  // Perform a test operation here
+});
 
 // Serve uploaded images
 app.use('/api/uploads', express.static('uploads'));
